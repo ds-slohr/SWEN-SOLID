@@ -2,7 +2,7 @@ package OCP;
 
 import java.util.List;
 
-public class Ocp {
+public class OpenClosePrinzip {
     public static void main(String[] args) {
         Product apple = new Product("Apple", Color.RED, Size.SMALL);
         Product tree = new Product("Tree", Color.GREEN, Size.MEDIUM);

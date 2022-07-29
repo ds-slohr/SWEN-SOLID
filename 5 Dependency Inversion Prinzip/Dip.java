@@ -1,6 +1,6 @@
 package DIP;
 
-class Dip {
+class DependencyInversionPrinzip {
     public static void main(String[] args) {
         Person parent = new Person("Jakob", Role.PARENT);
         Person child1 = new Person("Alex", Role.CHILD);

@@ -1,6 +1,6 @@
 package SPR;
 
-class Spr {
+class SingleResponsibilityPrinzip {
     public static void main(String[] args) throws Exception {
         Note note = new Note();
         note.addComment("First note");

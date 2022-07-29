@@ -1,6 +1,6 @@
 package ISP;
 
-public class Isp {
+public class InterfaceSegregationPrinzip {
     public static void main(String[] args) throws Exception {
 
         Document document = new Document();

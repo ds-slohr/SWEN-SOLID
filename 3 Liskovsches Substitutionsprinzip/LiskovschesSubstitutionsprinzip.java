@@ -1,6 +1,6 @@
 package LSP;
 
-public class Lsp {
+public class LiskovschesSubstitutionsprinzip {
     public static void main(String[] args) {
         Rectangle rectangle = RectangleFactory.newRectangle(2, 4);
         Rectangle square = RectangleFactory.newSquare(4);
