@@ -1,7 +1,8 @@
 package de.doubleslash.ocp;
 
 public class ColorSpecification implements Specification<Product>{
-    private Color color;
+
+    private final Color color;
 
     ColorSpecification(Color color) {
         this.color = color;

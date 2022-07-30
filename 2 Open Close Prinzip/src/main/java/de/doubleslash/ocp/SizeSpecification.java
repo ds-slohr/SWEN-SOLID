@@ -1,7 +1,8 @@
 package de.doubleslash.ocp;
 
-public class SizeSpecification  implements Specification<Product>{
-    private Size size;
+public class SizeSpecification implements Specification<Product>{
+
+    private final Size size;
 
     SizeSpecification(Size size) {
         this.size = size;

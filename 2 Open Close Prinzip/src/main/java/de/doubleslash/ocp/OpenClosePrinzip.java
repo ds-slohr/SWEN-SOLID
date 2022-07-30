@@ -9,15 +9,15 @@ public class OpenClosePrinzip {
         Product house = new Product("House", Color.BLUE, Size.LARGE);
 
         List<Product> products = List.of(apple, tree, house);
-        ImplFilter implFilter = new ImplFilter();
+        Filter<Product> filter = new Filter<>();
 
-        implFilter.filter(products, new ColorSpecification(Color.GREEN))
+        filter.filter(products, new ColorSpecification(Color.GREEN))
                 .forEach(p -> System.out.println(p.name + " is green"));
 
-        implFilter.filter(products, new SizeSpecification(Size.LARGE))
+        filter.filter(products, new SizeSpecification(Size.LARGE))
                 .forEach(p -> System.out.println(p.name + " is large"));
 
-        implFilter.filter(products,
+        filter.filter(products,
                 new AndSpecification<>(new ColorSpecification(Color.BLUE), new SizeSpecification(Size.LARGE)))
                 .forEach(p -> System.out.println(p.name + " is large and blue"));
     }
