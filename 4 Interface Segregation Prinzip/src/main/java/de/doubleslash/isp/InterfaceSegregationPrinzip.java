@@ -1,26 +1,27 @@
 package de.doubleslash.isp;
 
 public class InterfaceSegregationPrinzip {
-    public static void main(String[] args) throws Exception {
 
-        Document document = new Document();
-        document.addDocument("Offer");
-        document.addDocument("Invoice");
+  public static void main(String[] args) throws Exception {
 
-        PrinterHP printerHP = new PrinterHP();
-        printerHP.Print(document);
+    Document document = new Document();
+    document.addDocument("Offer");
+    document.addDocument("Invoice");
 
-        ScannerSony scannerSony = new ScannerSony();
-        scannerSony.Scan(document);
+    PrinterHP printerHP = new PrinterHP();
+    printerHP.Print(document);
 
-        PhotocopierHP photocopierHP = new PhotocopierHP();
-        photocopierHP.Print(document);
+    ScannerSony scannerSony = new ScannerSony();
+    scannerSony.Scan(document);
 
-        FaxPanasonic faxPanasonic = new FaxPanasonic();
+    PhotocopierHP photocopierHP = new PhotocopierHP();
+    photocopierHP.Print(document);
 
-        MultiFunctionMachine multiFunctionMachine = new MultiFunctionMachine(printerHP, scannerSony, faxPanasonic);
-        multiFunctionMachine.InternetFax(document);
-    }
+    FaxPanasonic faxPanasonic = new FaxPanasonic();
+
+    MultiFunctionMachine multiFunctionMachine = new MultiFunctionMachine(printerHP, scannerSony, faxPanasonic);
+    multiFunctionMachine.InternetFax(document);
+  }
 }
 
 

@@ -1,7 +1,8 @@
 package de.doubleslash.isp;
 
 public class ScannerSony implements Scanner {
-    public void Scan(Document d) {
-        System.out.println("Scan the text from the document: " + d);
-    }
+
+  public void Scan(Document d) {
+    System.out.println("Scan the text from the document: " + d);
+  }
 }

@@ -1,6 +1,6 @@
 package de.doubleslash.dip;
 
 public enum Role {
-    PARENT,
-    CHILD
+  PARENT,
+  CHILD
 }

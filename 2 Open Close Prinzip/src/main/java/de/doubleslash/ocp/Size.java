@@ -1,7 +1,7 @@
 package de.doubleslash.ocp;
 
 public enum Size {
-    SMALL,
-    MEDIUM,
-    LARGE,
+  SMALL,
+  MEDIUM,
+  LARGE,
 }
