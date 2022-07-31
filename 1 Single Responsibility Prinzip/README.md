@@ -1,4 +1,8 @@
+# Aufgabenstellung
+Es sollen Notizen erstellt werden, die später als Datei gespeichert werden können.
 
+
+# Lösung
 ![PlantUML model](https://www.plantuml.com/plantuml/png/SoWkIImgAStDuKhEIImkLWX8BIhEB2v9pKjEvK9YArWf52UMfORaksNcf6hu9sMb9fSevEMNfEee19SKPUQbAwG19V8ISrCrkVo0mWgwkiX6MIdOWFKNSpcavgK0RGC0)
 
 <!--
