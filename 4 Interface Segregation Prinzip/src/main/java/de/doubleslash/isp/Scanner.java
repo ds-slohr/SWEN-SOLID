@@ -1,6 +1,11 @@
 package de.doubleslash.isp;
 
-public interface Scanner {
+import java.util.Arrays;
 
-  void Scan(Document d) throws Exception;
+public class Scanner implements IScanner {
+
+  public void scan(Document... documents) {
+    Arrays.stream(documents)
+        .forEach(d -> System.out.println("Scan with Scanner the text from the document: " + d.getName()));
+  }
 }

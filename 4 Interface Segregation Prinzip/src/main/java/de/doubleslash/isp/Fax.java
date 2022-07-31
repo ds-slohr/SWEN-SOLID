@@ -1,6 +1,12 @@
 package de.doubleslash.isp;
 
-public interface Fax {
+import java.util.Arrays;
 
-  void InternetFax(Document d) throws Exception;
+public class Fax implements IFax {
+
+  @Override
+  public void internetFax(Document... documents) {
+    Arrays.stream(documents)
+        .forEach(d -> System.out.println("Fax with Fax the text from the document: " + d.getName()));
+  }
 }

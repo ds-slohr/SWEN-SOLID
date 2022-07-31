@@ -1,26 +1,24 @@
 package de.doubleslash.isp;
 
-public class MultiFunctionMachine implements MultiFunctionDevice {
+import java.util.Arrays;
 
-  private Printer printer;
-  private Scanner scanner;
-  private Fax fax;
+public class MultiFunctionMachine implements IPrinter, IScanner, IFax {
 
-  MultiFunctionMachine(Printer printer, Scanner scanner, Fax fax) {
-    this.printer = printer;
-    this.scanner = scanner;
-    this.fax = fax;
+  @Override
+  public void print(Document... documents) {
+    Arrays.stream(documents)
+        .forEach(d -> System.out.println("Print with Multifunctional the text from the document: " + d.getName()));
   }
 
-  public void Print(Document d) throws Exception {
-    printer.Print(d);
+  @Override
+  public void scan(Document... documents) {
+    Arrays.stream(documents)
+        .forEach(d -> System.out.println("Scan with Multifunctional the text of the document: " + d.getName()));
   }
 
-  public void Scan(Document d) throws Exception {
-    scanner.Scan(d);
-  }
-
-  public void InternetFax(Document d) throws Exception {
-    fax.InternetFax(d);
+  @Override
+  public void internetFax(Document... documents) {
+    Arrays.stream(documents)
+        .forEach(d -> System.out.println("Fax with Multifunctional the text from the document: " + d.getName()));
   }
 }

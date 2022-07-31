@@ -1,18 +1,14 @@
 package de.doubleslash.isp;
 
-import java.util.ArrayList;
-import java.util.List;
-
 public class Document {
 
-  private final List<String> documents = new ArrayList<>();
+  private final String name;
 
-  void addDocument(String text) {
-    documents.add(text);
+  public Document(String name) {
+    this.name = name;
   }
 
-  @Override
-  public String toString() {
-    return String.join(", ", documents);
+  public String getName() {
+    return name;
   }
 }

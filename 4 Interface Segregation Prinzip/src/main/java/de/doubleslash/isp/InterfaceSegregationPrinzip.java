@@ -4,23 +4,34 @@ public class InterfaceSegregationPrinzip {
 
   public static void main(String[] args) throws Exception {
 
-    Document document = new Document();
-    document.addDocument("Offer");
-    document.addDocument("Invoice");
+    Document offer = new Document("Offer");
 
-    PrinterHP printerHP = new PrinterHP();
-    printerHP.Print(document);
+    // Printer
+    IPrinter printerHP = new Printer();
+    printerHP.print(offer);
 
-    ScannerSony scannerSony = new ScannerSony();
-    scannerSony.Scan(document);
+    IPrinter photocopierHpAsPrinter = new Photocopier();
+    photocopierHpAsPrinter.print(offer);
 
-    PhotocopierHP photocopierHP = new PhotocopierHP();
-    photocopierHP.Print(document);
+    IPrinter multiAsPrinter = new MultiFunctionMachine();
+    multiAsPrinter.print(offer);
 
-    FaxPanasonic faxPanasonic = new FaxPanasonic();
+    // Scanner
+    IScanner scannerSony = new Scanner();
+    scannerSony.scan(offer);
 
-    MultiFunctionMachine multiFunctionMachine = new MultiFunctionMachine(printerHP, scannerSony, faxPanasonic);
-    multiFunctionMachine.InternetFax(document);
+    IScanner photocopierHpAsScanner = new Photocopier();
+    photocopierHpAsScanner.scan(offer);
+
+    IScanner multiAsScanner = new MultiFunctionMachine();
+    multiAsScanner.scan(offer);
+
+    // Fax
+    IFax faxPanasonic = new Fax();
+    faxPanasonic.internetFax(offer);
+
+    IFax multiAsFax = new MultiFunctionMachine();
+    multiAsFax.internetFax(offer);
   }
 }
 
