@@ -3,8 +3,8 @@ package de.doubleslash.lsp;
 public class LiskovschesSubstitutionsprinzip {
 
   public static void main(String[] args) {
-    Rectangle rectangle = RectangleFactory.newRectangle(2, 4);
-    Rectangle square = RectangleFactory.newSquare(4);
+    Rectangle rectangle = new Rectangle(2, 4);
+    Rectangle square = new Square(4);
 
     showArea(rectangle);
     showArea(square);
