@@ -3,17 +3,12 @@ package de.doubleslash.dip;
 class DependencyInversionPrinzip {
 
   public static void main(String[] args) {
-    Person parent = new Person("Jakob", Role.PARENT);
-    Person child1 = new Person("Alex", Role.CHILD);
-    Person child2 = new Person("Anna", Role.CHILD);
+    Switch lightSwitch = new Switch(new Lamp());
+    lightSwitch.press();
+    lightSwitch.press();
 
-    Relationships relationships = new Relationships();
-    relationships.addParentAndChild(parent);
-    relationships.addParentAndChild(child1);
-    relationships.addParentAndChild(child2);
-
-    Research research = new Research(parent, relationships);
-    System.out.println(research);
-
+    Switch circutSwitch = new Switch(new CircutBreaker());
+    circutSwitch.press();
+    circutSwitch.press();
   }
 }
